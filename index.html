@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashier Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <img src="image.png" alt="Cashier Menu" style="display: block; margin: 0 auto 20px; max-width: 300px; height: auto;">
+
+    <!-- Discount Toggle -->
+    <div class="discount-toggle">
+      <label class="toggle">
+        <input type="checkbox" id="discount-toggle">
+        <span class="slider"></span>
+        Police/EMS Discount
+      </label>
+    </div>
+
+    <!-- Menu Sections -->
+    <div class="menu-sections">
+      <!-- Food Section -->
+      <section class="menu-section">
+        <h2>Food</h2>
+        <div class="menu-item" data-name="Fingle Burger" data-price="300">
+          <span>Fingle Burger - $300</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Money Shott" data-price="300">
+          <span>Money Shott - $300</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="The Bleeder" data-price="300">
+          <span>The Bleeder - $300</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Sandwich" data-price="300">
+          <span>Sandwich - $300</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Meat Free" data-price="300">
+          <span>Meat Free - $300</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Fries" data-price="100">
+          <span>Fries - $100</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </section>
+
+      <!-- Drinks Section -->
+      <section class="menu-section">
+        <h2>Drinks</h2>
+        <div class="menu-item" data-name="eCola" data-price="100">
+          <span>eCola - $100</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="eCola Light" data-price="100">
+          <span>eCola Light - $100</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Sprunk" data-price="100">
+          <span>Sprunk - $100</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Drang O Tang" data-price="100">
+          <span>Drang O Tang - $100</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Coffee" data-price="200">
+          <span>Coffee - $200</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="menu-item" data-name="Blueberry Slushie" data-price="200">
+          <span>Blueberry Slushie - $200</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </section>
+
+      <!-- Royal Meal Section -->
+      <section class="menu-section">
+        <h2>Royal Meal</h2>
+        <div class="menu-item royal-meal" data-name="Heart Stopper & Watermelon Slushie" data-price="600">
+          <span>Heart Stopper & Watermelon Slushie - $600</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <p class="discount-note">*Discount: $500 for orders of more than 10 Royal Meals or with Police/EMS discount.</p>
+      </section>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total">0.00</span></p>
+      <button class="reload-button" onclick="window.location.reload()">Reload</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

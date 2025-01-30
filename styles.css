@@ -1,0 +1,276 @@
+/* styles.css */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global Styles */
+html, body {
+  overflow: hidden; /* Disable scrolling */
+  height: 100%; /* Full viewport height */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient background */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1600px; /* Wider container */
+  margin: 20px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  height: calc(100vh - 40px); /* Fit within viewport */
+  overflow-y: auto; /* Allow scrolling inside container */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between sections */
+  margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin: 10px 0; /* Small margin */
+  padding: 5px; /* Small padding */
+}
+
+h2 {
+  color: #444;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 10px;
+}
+
+/* Discount Toggle */
+.discount-toggle {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  width: 50px;
+  height: 25px;
+  background: #ddd;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.slider::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: transform 0.2s;
+}
+
+.toggle input:checked + .slider {
+  background: #28a745;
+}
+
+.toggle input:checked + .slider::before {
+  transform: translateX(25px);
+}
+
+/* Menu Sections */
+.menu-sections {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.menu-section {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item span {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.add-to-cart {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.add-to-cart:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* Royal Meal Section */
+.royal-meal {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discount-note {
+  font-size: 1rem;
+  color: #dc3545;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Cart Section */
+.cart-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; /* Increase margin to the bottom */
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  color: #555;
+  gap: 10px; /* Add gap between elements */
+}
+
+#cart-items li span:first-child {
+  flex: 2; /* Item name takes more space */
+}
+
+#cart-items li input {
+  width: 50px; /* Make the number input smaller */
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1; /* Quantity input takes less space */
+  margin: 0 auto; /* Center the number box */
+}
+
+#cart-items li span:last-child {
+  flex: 1; /* Price takes less space */
+}
+
+#cart-items li button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#cart-items li button:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.reload-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.reload-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Quantity Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-controls button {
+  background: #ddd;
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.quantity-controls button:hover {
+  background: #ccc;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}
