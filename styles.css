@@ -7,7 +7,7 @@ html, body {
   overflow: hidden; /* Disable scrolling */
   height: 100%; /* Full viewport height */
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient background */
+  background: linear-gradient(15deg, #1d3969, #d56428); /* Gradient background */
   margin: 0;
   padding: 0;
 }
